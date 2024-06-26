@@ -18,7 +18,7 @@ slint::slint! {
                  duration: 100ms;
             }
             border-radius: 4px;
-            border-width: 2px;
+            border-width: 1px;
             border-color: self.background.darker(20%);
             ta := TouchArea {
                 clicked => { CalcLogic.button-pressed(root.text) }
@@ -32,9 +32,10 @@ slint::slint! {
         height: 560px;
         width: 360px;
         GridLayout {
-            padding: 10px;
-            spacing: 5px;
-            Text { text: value; colspan: 3; }
+            padding: 3px;
+            spacing: 1px;
+            Text { text: value; colspan: 4; font-size: 48px;
+                horizontal-alignment: right;  vertical-alignment: bottom;}
             Row {
                 Button { text: "1"; }
                 Button { text: "2"; }
